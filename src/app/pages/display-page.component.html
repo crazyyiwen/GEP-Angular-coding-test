@@ -1,0 +1,70 @@
+<mat-tab-group>
+    <mat-tab label="Customers">
+        
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+                <ng-container matColumnDef="firstname">
+                    <mat-header-cell *matHeaderCellDef>FirstName</mat-header-cell>
+                    <mat-cell *matCellDef="let customer"> {{customer.shipTo.firstName}} </mat-cell>
+                </ng-container>
+            
+            
+                <ng-container matColumnDef="lastname">
+                    <mat-header-cell *matHeaderCellDef> LastName </mat-header-cell>
+                    <mat-cell *matCellDef="let customer"> {{customer.shipTo.lastName}} </mat-cell>
+                </ng-container>
+            
+            
+                <ng-container matColumnDef="address">
+                    <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+                    <mat-cell *matCellDef="let customer"> {{customer.shipTo.address}} </mat-cell>
+                </ng-container>
+            
+            
+                <ng-container matColumnDef="city">
+                    <mat-header-cell *matHeaderCellDef> City </mat-header-cell>
+                    <mat-cell *matCellDef="let customer"> {{customer.shipTo.city}} </mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="state">
+                    <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
+                    <mat-cell *matCellDef="let customer"> {{customer.shipTo.state}} </mat-cell>
+                </ng-container>
+            
+                <ng-container matColumnDef="zip">
+                    <mat-header-cell *matHeaderCellDef> Zip </mat-header-cell>
+                    <mat-cell *matCellDef="let customer"> {{customer.shipTo.zip}} </mat-cell>
+                </ng-container>
+            
+            
+                <mat-header-row *matHeaderRowDef="displayedColumnsCustomers"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumnsCustomers;"  (click)="getRecord(row)"></mat-row>
+            
+        </mat-table>
+    </mat-tab>
+    <mat-tab label="Orders">
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+            <ng-container matColumnDef="sku">
+                <mat-header-cell *matHeaderCellDef>Sku</mat-header-cell>
+                <mat-cell *matCellDef="let order"> {{order.sku}} </mat-cell>
+            </ng-container>
+    
+    
+            <ng-container matColumnDef="price">
+                <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+                <mat-cell *matCellDef="let order"> {{order.price}} </mat-cell>
+            </ng-container>
+    
+    
+            <ng-container matColumnDef="orderNo">
+                <mat-header-cell *matHeaderCellDef> OrderNo </mat-header-cell>
+                <mat-cell *matCellDef="let order"> {{order.orderNo}} </mat-cell>
+            </ng-container>
+    
+    
+            <mat-header-row *matHeaderRowDef="displayedColumnsOrders"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumnsOrders;"></mat-row>
+        </mat-table>
+    </mat-tab>
+</mat-tab-group>

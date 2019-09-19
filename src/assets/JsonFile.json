@@ -1,0 +1,44 @@
+[
+    {
+        "sku": "20223",
+        "price": 23.95,
+        "orderNo": "1X2345",
+        "shipTo": {
+            "firstName": "Jane",
+            "lastName": "Smith",
+            "address": "123 Maple Street",
+            "city": "Pretendville",
+            "state": "NY",
+            "zip": "12345"
+        },
+        "billTo": {
+            "firstName": "Jane",
+            "lastName": "Smith",
+            "address": "123 Maple Street",
+            "city": "Pretendville",
+            "state": "NY",
+            "zip": "12345"
+        }
+    },
+    {
+        "sku": "234567",
+        "price": 50.95,
+        "orderNo": "1X2347",
+        "shipTo": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "address": "123 Test Street",
+            "city": "New York",
+            "state": "NY",
+            "zip": "12345"
+        },
+        "billTo": {
+            "firstName": "John",
+            "lastName": "Doe",
+            "address": "123 Test Street",
+            "city": "New York",
+            "state": "NY",
+            "zip": "12345"
+        }
+    }
+]
